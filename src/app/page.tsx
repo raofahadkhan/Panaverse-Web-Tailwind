@@ -1,7 +1,14 @@
-import React from "react";
+import Hero from "@/components/widgets/Hero";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <Hero />
+      <Hero />
+      <Hero />
+      <Hero />
+    </>
+  );
 };
 
 export default Home;
