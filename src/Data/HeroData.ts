@@ -1,6 +1,6 @@
 import { HeroData } from "./types";
 
-export const data: HeroData[] = [
+const data: HeroData[] = [
   {
     id: "hero",
     title:
@@ -23,4 +23,4 @@ export const data: HeroData[] = [
   },
 ];
 
-export {};
+export { data };

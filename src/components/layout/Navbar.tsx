@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { FC, useState } from "react";
 import Wrapper from "../shared/Wrapper";
 import Logo from "/public/logo.png";
 
-const Navbar = () => {
+const Navbar:FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     // <Wrapper>
@@ -46,7 +46,9 @@ const Navbar = () => {
           <div>
             <button
               className="cursor-pointer md:hidden pr-2"
-              onClick={(e) => setIsOpen(!isOpen)}
+              onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
+                setIsOpen(!isOpen)
+              }
             >
               {isOpen ? (
                 <svg

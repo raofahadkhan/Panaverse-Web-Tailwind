@@ -1,14 +1,13 @@
-import Box from "@/components/shared/Box";
 import CoreBox from "@/components/widgets/CoreBox";
 import Hero from "@/components/widgets/Hero";
 import Hero2 from "@/components/widgets/Hero2";
-import Partners from "@/components/widgets/Partners";
 import Program from "@/components/widgets/Program";
 import SpecializedBox from "@/components/widgets/SpecializedBox";
 import { data } from "@/Data/HeroData";
+import { HeroData } from "@/Data/types";
 
 const getData = (id: string) => {
-  const dataa = data.find((e) => e.id === id);
+  const dataa = data.find((e: HeroData) => e.id === id);
   return dataa;
 };
 

@@ -1,12 +1,7 @@
+import { data } from "@/Data/ProgramData";
 import { dataProgram } from "@/Data/types";
 import React from "react";
 
-const data: dataProgram = {
-  id: "The Program in a Nutshell",
-  title: "Earn While You Learn \n",
-  description:
-    "In this brand-new type of curriculum, students will learn how to make money and boost exports in the \n classroom and will begin doing so within six months of the programs beginning. It resembles a cross \n between a corporate venture and an educational project.",
-};
 const Program = () => {
   return (
     // <Wrapper>

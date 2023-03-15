@@ -3,22 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import Logo from "/public/logo.png";
+import { usefulLinks, courses } from "@/Data/FooterData";
 
 const Footer: FC = () => {
-  const usefulLinks: Links[] = [
-    { text: "Home", path: "#" },
-    { text: "Courses", path: "#" },
-    { text: "About us", path: "#" },
-    { text: "Contact us", path: "#" },
-    { text: "Privacy Policy", path: "#" },
-  ];
-  const services: Links[] = [
-    { text: "Artifical Intelligence", path: "#" },
-    { text: "Cloud Computing", path: "#" },
-    { text: "Internet of Things", path: "#" },
-    { text: "Metaverse", path: "#" },
-    { text: "Web 3", path: "#" },
-  ];
   return (
     // <Wrapper>
     <footer className="bg-gray-200">
@@ -44,7 +31,7 @@ const Footer: FC = () => {
             <div className="mb-5">
               <h4 className="pb-4">Useful Links</h4>
               <ul className="text-white">
-                {usefulLinks.map((links, index) => (
+                {usefulLinks.map((links: Links, index:number) => (
                   <li key={index} className="pb-4 flex items-center">
                     <span className="pr-1">
                       <svg
@@ -72,7 +59,7 @@ const Footer: FC = () => {
             <div className="mb-5">
               <h4 className="pb-4">Specialization</h4>
               <ul className="text-white">
-                {services.map((links, index) => (
+                {courses.map((links:Links, index:number) => (
                   <li key={index} className="pb-4 flex items-center">
                     <span className="pr-1">
                       <svg
