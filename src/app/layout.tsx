@@ -1,4 +1,6 @@
+import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+// import Navbar from "@/components/layout/Navbar/Navbar";
 import "./globals.css";
 
 export const metadata = {
@@ -13,9 +15,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/public/favicon.ico" />
+      </head>
       <body>
-        <Navbar />
+        <div className="sticky top-0 z-[100] bg-white shadow-md">
+          <Navbar />
+        </div>
         {children}
+        <Footer />
       </body>
     </html>
   );
