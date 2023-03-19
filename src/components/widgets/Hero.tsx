@@ -2,7 +2,7 @@ import { HeroData } from "@/Data/types";
 import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 import HeroImage from "../../assests/images/HeroImageOne.png";
-import SegmentImage from "../../assests/images/segmentImage.png";
+import SegmentImage from "./../../assests/images/segmentImage.png";
 
 import Button from "../shared/Button";
 import Wrapper from "../shared/Wrapper";
