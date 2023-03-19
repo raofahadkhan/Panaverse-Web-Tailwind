@@ -15,16 +15,17 @@ export interface CoreBoxData extends Omit<BoxProps, "id"> {
 export interface SpecializedBoxData extends CoreBoxData {}
 
 export interface HeroData extends Omit<CoreBoxData, "id"> {
-  id: "hero" | "core-courses";
+  id: "hero" | "core-courses" | "segment";
   header: string;
   buttonText: string;
-  img?: true | false;
+  img: true | false;
   blurEffect?: true | false;
+  bgcolor?: "black" | "transparent";
 }
 
 export interface dataProgram extends CoreBoxData {}
 
-export interface IQuarterData {
+export interface quarterData {
   id: string;
   objective: string;
   duration_weeks: number; //weeks
@@ -52,7 +53,7 @@ export interface IQuarterData {
 export interface ITrackData {
   id: string;
   name: string;
-  quarters: IQuarterData[];
+  quarters: quarterData[];
 }
 
 export {};

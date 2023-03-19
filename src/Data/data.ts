@@ -3,9 +3,9 @@
 // There are many kinds of element type such as text, link, sub - heading, h3, note and list.
 // Each section has a title and many children(in some cases there is no child).
 
-import { IQuarterData, ITrackData } from "@/Data/types";
+import { quarterData, ITrackData } from "@/Data/types";
 
-export const CompulsaryQuarterData: IQuarterData[] = [
+export const CompulsaryQuarterData: quarterData[] = [
   {
     id: "q1",
     objective: "CS-101: Object-Oriented Programming using TypeScript",
@@ -873,7 +873,7 @@ export const CompulsaryQuarterData: IQuarterData[] = [
   },
 ];
 
-const WMDQuarters: IQuarterData[] = [
+const WMDQuarters: quarterData[] = [
   {
     id: "q4",
     objective:
@@ -1568,7 +1568,7 @@ const WMDQuarters: IQuarterData[] = [
   },
 ];
 
-const AIQuarters: IQuarterData[] = [
+const AIQuarters: quarterData[] = [
   {
     id: "q4",
     objective:
@@ -1698,7 +1698,7 @@ const AIQuarters: IQuarterData[] = [
   },
 ];
 
-const CNCQuarters: IQuarterData[] = [
+const CNCQuarters: quarterData[] = [
   {
     id: "q4",
     objective: "CN-351: Certified Kubernetes Application Developer (CKAD)",
@@ -1761,7 +1761,7 @@ const CNCQuarters: IQuarterData[] = [
   },
 ];
 
-const IOTQuarters: IQuarterData[] = [
+const IOTQuarters: quarterData[] = [
   {
     id: "q4",
     objective:
@@ -2232,7 +2232,7 @@ const IOTQuarters: IQuarterData[] = [
   },
 ];
 
-const GBSQuarters: IQuarterData[] = [
+const GBSQuarters: quarterData[] = [
   {
     id: "q4",
     objective: "Bio-351: Python for Biologists",
@@ -2279,7 +2279,7 @@ const GBSQuarters: IQuarterData[] = [
   },
 ];
 
-export const NPSQuarters: IQuarterData[] = [
+export const NPSQuarters: quarterData[] = [
   {
     id: "q4",
     objective: "NPA-351: CCNA 200-301 Certification",

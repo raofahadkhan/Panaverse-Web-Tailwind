@@ -1,7 +1,9 @@
 import { HeroData } from "@/Data/types";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 import HeroImage from "../../assests/images/HeroImageOne.png";
+import SegmentImage from "../../assests/images/segmentImage.png";
+
 import Button from "../shared/Button";
 import Wrapper from "../shared/Wrapper";
 
@@ -13,14 +15,21 @@ const Hero: FC<HeroData> = ({
   buttonText,
   img,
   blurEffect,
+  bgcolor = "transparent",
 }) => {
+  let HeroImg: StaticImageData = HeroImage;
+  if (id === "segment") {
+    HeroImg = SegmentImage;
+  }
   return (
     <section
-      className={` ${id === "hero" ? "border border-transparent" : ""} `}
+      className={` ${id === "hero" ? "border border-transparent" : ""}  ${
+        bgcolor === "black" ? "bg-black " : "bg-transparent"
+      }`}
     >
       <Wrapper>
-        <div className="mb-10">
-          <div className="flex flex-col md:flex-row items-center justify-between mx-1 mt-2">
+        <div className="pb-10">
+          <div className="flex flex-col md:flex-row items-center justify-between mx-1 pt-2">
             {/* Left Side */}
             <div className="flex">
               <div className={`${!img ? "" : "max-w-[570px]"} relative`}>
@@ -31,10 +40,18 @@ const Hero: FC<HeroData> = ({
                   {title}
                 </h4>
 
-                <h1 className="text-3xl md:text-[40px] md:leading-[50px] lg:text-5xl font-bold text-gray-900 whitespace-pre-line">
+                <h1
+                  className={`text-3xl md:text-[40px] md:leading-[50px] lg:text-5xl font-bold ${
+                    bgcolor === "black" ? "text-white" : "text-gray-900"
+                  } whitespace-pre-line`}
+                >
                   {header}
                 </h1>
-                <p className="mt-6 text-sm sm:text-lg text-slate-700 whitespace-pre-line">
+                <p
+                  className={`mt-6 text-sm sm:text-lg ${
+                    bgcolor === "black" ? "text-white" : "text-gray-700"
+                  } whitespace-pre-line`}
+                >
                   {description}
                 </p>
 
@@ -51,7 +68,7 @@ const Hero: FC<HeroData> = ({
               <div className="mt-8">
                 {img && (
                   <Image
-                    src={HeroImage}
+                    src={HeroImg}
                     alt="Hero Section Image"
                     className="right-3 h-90 w-[600px]"
                   />

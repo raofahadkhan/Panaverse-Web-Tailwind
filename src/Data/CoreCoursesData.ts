@@ -1,4 +1,4 @@
-import { CoreBoxData } from "./types";
+import { CoreBoxData } from "./types"; 
 const courseData: CoreBoxData[] = [
   {
     id: "Q1",
