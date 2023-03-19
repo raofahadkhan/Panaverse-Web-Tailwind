@@ -25,7 +25,7 @@ export interface HeroData extends Omit<CoreBoxData, "id"> {
 export interface dataProgram extends CoreBoxData {}
 
 export interface IQuarterData {
-  id: number;
+  id: string;
   objective: string;
   duration_weeks: number; //weeks
   description: string[];
@@ -47,6 +47,12 @@ export interface IQuarterData {
         }
     )[][];
   }[];
+}
+
+export interface ITrackData {
+  id: string;
+  name: string;
+  quarters: IQuarterData[];
 }
 
 export {};
