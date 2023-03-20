@@ -24,6 +24,7 @@ const SpecializedBox = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 lg:gap-y-12 lg:gap-x-9 md:gap-y-10 md:gap-x-4 w-fit mx-auto ">
           {specializedBoxData.map((data: SpecializedBoxData, index: number) => (
             <Box
+              href={data.href}
               key={index}
               title={data.title}
               description={data.description}

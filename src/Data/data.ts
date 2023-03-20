@@ -1,9 +1,10 @@
+import { specializedQuarterData } from "@/Data/types";
 // Data is set in such a format that each line is represented as an object with its element type, text, and url(if it is link).
 // Each child is an array because there can be two or more lines associated with each other.
 // There are many kinds of element type such as text, link, sub - heading, h3, note and list.
 // Each section has a title and many children(in some cases there is no child).
 
-import { quarterData, ITrackData } from "@/Data/types";
+import { quarterData, trackData } from "@/Data/types";
 
 export const CompulsaryQuarterData: quarterData[] = [
   {
@@ -873,9 +874,12 @@ export const CompulsaryQuarterData: quarterData[] = [
   },
 ];
 
-const WMDQuarters: quarterData[] = [
+const WMDQuarters: specializedQuarterData[] = [
   {
     id: "q4",
+    name: "Web 3.0 and Metaverse Specialization",
+    heroDescription:
+      "This Web 3.0 and Metaverse Specialization focuses on developing full stack Web 3.0 and Metaverse experiences for the next generation of the internet by specializing in  building world that merge the best of the cutting-edge decentralized distributed blockchains with 3D metaverse client experiences",
     objective:
       "W3-351: Developing Smart Contracts and Planet-Scale Web 3.0 Dapps",
     duration_weeks: 13, //weeks
@@ -1373,6 +1377,9 @@ const WMDQuarters: quarterData[] = [
   },
   {
     id: "q5",
+    name: "Web 3.0 and Metaverse Specialization",
+    heroDescription:
+      "This Web 3.0 and Metaverse Specialization focuses on developing full stack Web 3.0 and Metaverse experiences for the next generation of the internet by specializing in  building world that merge the best of the cutting-edge decentralized distributed blockchains with 3D metaverse client experiences",
     objective:
       "MV-361: Developing Planet-Scale Open Virtual and Augmented Metaverse Experiences",
     duration_weeks: 13, //weeks
@@ -1568,9 +1575,12 @@ const WMDQuarters: quarterData[] = [
   },
 ];
 
-const AIQuarters: quarterData[] = [
+const AIQuarters: specializedQuarterData[] = [
   {
     id: "q4",
+    name: "Artificial Intelligence (AI) and Deep Learning Specialization",
+    heroDescription:
+      "The AI and Deep Learning Specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
     objective:
       "AI-351: Developing Planet-Scale Intelligent APIs and Python Programming",
     duration_weeks: 13, //weeks
@@ -1652,6 +1662,9 @@ const AIQuarters: quarterData[] = [
   },
   {
     id: "q5",
+    name: "Artificial Intelligence (AI) and Deep Learning Specialization",
+    heroDescription:
+      "The AI and Deep Learning Specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
     objective: "AI-361: Deep Learning and MLOps",
     duration_weeks: 13, //weeks
     description: [
@@ -1698,9 +1711,12 @@ const AIQuarters: quarterData[] = [
   },
 ];
 
-const CNCQuarters: quarterData[] = [
+const CNCQuarters: specializedQuarterData[] = [
   {
     id: "q4",
+    name: "Cloud Native Computing Specialization",
+    heroDescription:
+      "The Cloud Native Computing Specialization foucuses on Container, Kubernetes and CDK for Kubernetes.",
     objective: "CN-351: Certified Kubernetes Application Developer (CKAD)",
     duration_weeks: 13, //weeks
     description: [
@@ -1738,6 +1754,9 @@ const CNCQuarters: quarterData[] = [
   },
   {
     id: "q5",
+    name: "Cloud Native Computing Specialization",
+    heroDescription:
+      "The Cloud Native Computing Specialization foucuses on Container, Kubernetes and CDK for Kubernetes.",
     objective: "CN-361: Developing Multi-Cloud Apps using CDK for Terraform",
     duration_weeks: 13, //weeks
     description: [
@@ -1761,9 +1780,12 @@ const CNCQuarters: quarterData[] = [
   },
 ];
 
-const IOTQuarters: quarterData[] = [
+const IOTQuarters: specializedQuarterData[] = [
   {
     id: "q4",
+    name: "Ambient Computing and IoT Specialization",
+    heroDescription:
+      "The Ambient Computing and IoT Specialization foucuses on building Smart Homes, Offices, Factories and Cities using Voice Computing, Matter Protocol, and Embedded Devices.",
     objective:
       "AC-351: Ambient Computing with Voice Assistants and Matter Devices",
     duration_weeks: 13, //weeks
@@ -1807,6 +1829,9 @@ const IOTQuarters: quarterData[] = [
   },
   {
     id: "q5",
+    name: "Ambient Computing and IoT Specialization",
+    heroDescription:
+      "The Ambient Computing and IoT Specialization foucuses on building Smart Homes, Offices, Factories and Cities using Voice Computing, Matter Protocol, and Embedded Devices.",
     objective: "AC-361: Embedded Programming using C and Rust",
     duration_weeks: 13, //weeks
     description: [
@@ -2232,9 +2257,12 @@ const IOTQuarters: quarterData[] = [
   },
 ];
 
-const GBSQuarters: quarterData[] = [
+const GBSQuarters: specializedQuarterData[] = [
   {
     id: "q4",
+    name: "Genomics and Bioinformatics Sepcialization",
+    heroDescription:
+      "Genomics is the study of the total genetic makeup of individual organisms, and how this genetic information is structured, functions and has evolved. This Specialization focuses on performing complex bioinformatics analysis using the most essential Python libraries and applications.",
     objective: "Bio-351: Python for Biologists",
     duration_weeks: 13, //weeks
     description: [
@@ -2257,6 +2285,9 @@ const GBSQuarters: quarterData[] = [
   },
   {
     id: "q5",
+    name: "Genomics and Bioinformatics Sepcialization",
+    heroDescription:
+      "Genomics is the study of the total genetic makeup of individual organisms, and how this genetic information is structured, functions and has evolved. This Specialization focuses on performing complex bioinformatics analysis using the most essential Python libraries and applications.",
     objective: "Bio-361: Bioinformatics with Python",
     duration_weeks: 13, //weeks
     description: [
@@ -2279,9 +2310,12 @@ const GBSQuarters: quarterData[] = [
   },
 ];
 
-export const NPSQuarters: quarterData[] = [
+export const NPSQuarters: specializedQuarterData[] = [
   {
     id: "q4",
+    name: "Network Programability and Automation Specialization",
+    heroDescription:
+      "More than ever, network engineers are finding it challenging to complete their duties entirely manually. Network Automation is now crucial due to new protocols, technologies, delivery models, and the requirement for enterprises to become more adaptable and agile.This courses teaches netowrk engineers how to automate systems with code using a variety of technologies and tools including Linux, Python, APIs and Git.",
     objective: "NPA-351: CCNA 200-301 Certification",
     duration_weeks: 13, //weeks
     description: [
@@ -2304,6 +2338,9 @@ export const NPSQuarters: quarterData[] = [
   },
   {
     id: "q5",
+    name: "Network Programability and Automation Specialization",
+    heroDescription:
+      "More than ever, network engineers are finding it challenging to complete their duties entirely manually. Network Automation is now crucial due to new protocols, technologies, delivery models, and the requirement for enterprises to become more adaptable and agile.This courses teaches netowrk engineers how to automate systems with code using a variety of technologies and tools including Linux, Python, APIs and Git.",
     objective: "NPA-361: Network Programmability and Automation",
     duration_weeks: 13, //weeks
     description: [
@@ -2326,7 +2363,7 @@ export const NPSQuarters: quarterData[] = [
   },
 ];
 
-export const TracksData: ITrackData[] = [
+export const TracksData: trackData[] = [
   {
     id: "wmd",
     name: "Web 3 and Metaverse",

@@ -1,7 +1,8 @@
 import { BoxProps } from "@/Data/types";
+import Link from "next/link";
 import React, { FC } from "react";
 
-const Box: FC<BoxProps> = ({ id, title, description }) => {
+const Box: FC<BoxProps> = ({ id, title, description, href }) => {
   return (
     <div className="relative flex md:max-w-[340px]  hover:scale-105  ">
       <div className=" absolute -top-6 left-0 right-0 mx-auto bg-gradient-to-r from-[#00616C] to-[#16bacc] flex justify-center items-center text-white text-lg rounded-lg  h-12 w-12">
@@ -33,25 +34,27 @@ const Box: FC<BoxProps> = ({ id, title, description }) => {
               {title}
             </h3>
             <p className="text-base text-center">{description}</p>
-            <button className="flex items-end mt-4 text-red-500">
-              Learn More{" "}
-              <span className="pb-0.5 text-red-400">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-4 h-4 ml-1"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                  />
-                </svg>
-              </span>
-            </button>
+            <Link href={`${href}`}>
+              <button className="flex items-end mt-4 text-red-500 ">
+                Learn More
+                <span className="pb-0.5 text-red-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-4 h-4 ml-1"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

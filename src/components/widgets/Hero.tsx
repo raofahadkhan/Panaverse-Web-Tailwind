@@ -24,8 +24,8 @@ const Hero: FC<HeroData> = ({
   return (
     <section
       className={` ${id === "hero" ? "border border-transparent" : ""}  ${
-        bgcolor === "black" ? "bg-black " : "bg-transparent"
-      }`}
+        bgcolor === "black" ? "bg-slate-900 " : "bg-transparent"
+      } pb-8`}
     >
       <Wrapper>
         <div className="pb-10">

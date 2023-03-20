@@ -7,14 +7,15 @@ export interface BoxProps {
   id?: string;
   title: string;
   description: string;
+  href?: string;
 }
 
 export interface CoreBoxData extends Omit<BoxProps, "id"> {
   id: string;
 }
-export interface SpecializedBoxData extends CoreBoxData {}
+export interface SpecializedBoxData extends BoxProps {}
 
-export interface HeroData extends Omit<CoreBoxData, "id"> {
+export interface HeroData extends Omit<BoxProps, "id"> {
   id: "hero" | "core-courses" | "segment";
   header: string;
   buttonText: string;
@@ -50,10 +51,42 @@ export interface quarterData {
   }[];
 }
 
-export interface ITrackData {
+export interface specializedQuarterData {
   id: string;
   name: string;
-  quarters: quarterData[];
+  heroDescription: string;
+  objective: string;
+  duration_weeks: number; //weeks
+  description: string[];
+  outline: {
+    title: string;
+    children?: (
+      | {
+          type: string;
+          text: string;
+          url?: string;
+        }
+      | {
+          type: string;
+          children: {
+            type: string;
+            text: string;
+            url?: string;
+          }[][];
+        }
+    )[][];
+  }[];
+}
+
+export interface trackData {
+  id: string;
+  name: string;
+  quarters: specializedQuarterData[];
+}
+
+export interface trackSegementData {
+  trackName: string;
+  data: quarterData;
 }
 
 export {};
