@@ -7,7 +7,7 @@ function Description({ data }: { data: quarterData }) {
         {/* Course Description */}
 
         <div className="text-zinc-800">
-          <h1 className="text-5xl font-bold flex items-center gap-5 md:text-4xl">
+          <h1 className="text-3xl lg:text-5xl font-bold flex items-center gap-5 md:text-4xl">
             Course Description{" "}
           </h1>
           <div className="mt-10">
@@ -27,7 +27,7 @@ function Description({ data }: { data: quarterData }) {
         {/* Course Outline */}
 
         <div className="mt-20">
-          <h1 className="text-5xl font-bold flex items-center gap-5 md:text-4xl">
+          <h1 className="text-3xl font-bold flex items-center gap-5 md:text-4xl">
             Course Outline{" "}
           </h1>
           <div className="mt-10">
