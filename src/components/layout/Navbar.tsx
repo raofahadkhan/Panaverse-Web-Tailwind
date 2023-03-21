@@ -23,7 +23,9 @@ const Navbar: FC = () => {
         >
           <ul className="flex md:flex-row flex-col md:items-center items-center text-lg md:gap-[4vw] font-semibold gap-8">
             <li className="hover:text-gray-500 hover:cursor-pointer">
-              <Link href="/">Home</Link>
+              <Link href="/" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
             </li>
             <li className="hover:text-gray-500 hover:cursor-pointer">
               Courses
