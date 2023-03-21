@@ -19,7 +19,11 @@ function Page({ params }: { params: { quarter: string } }) {
   const data = getData(params.quarter);
 
   if (!data) {
-    return <div>Page Not Found</div>;
+    return (
+      <div className="w-[100vw] h-[100vh] flex justify-center items-center">
+        <h2 className="text-lg">404 Error | Page Not Found</h2>
+      </div>
+    );
   }
 
   return (
