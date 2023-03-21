@@ -5,7 +5,7 @@ import { FC, useState } from "react";
 import Wrapper from "../shared/Wrapper";
 import Logo from "/public/logo.png";
 
-const Navbar:FC = () => {
+const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     // <Wrapper>
@@ -22,7 +22,9 @@ const Navbar:FC = () => {
           } md:w-auto w-screen left-0 flex  items-center px-5`}
         >
           <ul className="flex md:flex-row flex-col md:items-center items-center text-lg md:gap-[4vw] font-semibold gap-8">
-            <li className="hover:text-gray-500 hover:cursor-pointer">Home</li>
+            <li className="hover:text-gray-500 hover:cursor-pointer">
+              <Link href="/">Home</Link>
+            </li>
             <li className="hover:text-gray-500 hover:cursor-pointer">
               Courses
             </li>
