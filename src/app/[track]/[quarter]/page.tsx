@@ -20,14 +20,8 @@ function getData(id: string, quarter: string) {
   return finalRes;
 }
 
-function page({
-  params,
-  searchParams,
-}: {
-  params: { track: string };
-  searchParams: { quarter: string };
-}) {
-  const data = getData(params.track, searchParams.quarter);
+function page({ params }: { params: { track: string; quarter: string } }) {
+  const data = getData(params.track, params.quarter);
 
   if (!data) {
     return (
@@ -50,12 +44,12 @@ function page({
           bgcolor="black"
         />
         <div className="flex gap-x-4 gap-y-2 mt-2 justify-center lg:hidden">
-          <Link href={`${params.track}?quarter=q4`}>
+          <Link href={`${params.track}/q4`}>
             <button className="py-4 px-8 bg-gradient-to-r from-[#00616C] to-[#16bacc] text-white rounded-md font-semibold">
               Q4
             </button>
           </Link>
-          <Link href={`${params.track}?quarter=q5`}>
+          <Link href={`${params.track}/q5`}>
             <button className="py-4 px-8 bg-gradient-to-r from-[#00616C] to-[#16bacc] text-white rounded-md font-semibold">
               Q5
             </button>
@@ -65,12 +59,12 @@ function page({
           <Description data={data} />
           <div className="mt-2 hidden lg:block relative ">
             <div className="gap-x-4  flex flex-col gap-y-2 sticky top-28 justify-center pb-5">
-              <Link href={`${params.track}?quarter=q4`}>
+              <Link href={`${params.track}/q4`}>
                 <button className="py-8 px-4 bg-gradient-to-r from-[#00616C] to-[#16bacc] text-white rounded-l-2xl font-semibold ">
                   Q4
                 </button>
               </Link>
-              <Link href={`${params.track}?quarter=q5`}>
+              <Link href={`${params.track}/q5`}>
                 <button className="py-8 px-4 bg-gradient-to-r from-[#00616C] to-[#16bacc] text-white rounded-l-2xl font-semibold">
                   Q5
                 </button>
