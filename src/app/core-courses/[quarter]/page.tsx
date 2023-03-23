@@ -46,7 +46,7 @@ function Page({ params }: { params: { quarter: string } }) {
           img={true}
           bgcolor="black"
         />
-        <div className="flex gap-x-4 gap-y-2 mt-2 justify-center md:hidden">
+        <div className="flex gap-x-4 gap-y-2 mt-2 justify-center lg:hidden">
           <Link href="/core-courses/q1">
             <button className="py-4 px-8 bg-gradient-to-r from-[#00616C] to-[#16bacc] text-white rounded-md font-semibold">
               Q1
@@ -65,7 +65,7 @@ function Page({ params }: { params: { quarter: string } }) {
         </div>
         <div className="flex">
           <Description data={data} />
-          <div className="mt-2 hidden md:block relative ">
+          <div className="mt-2 hidden lg:block relative ">
             <div className="gap-x-4  flex flex-col gap-y-2 sticky top-28 justify-center pb-5">
               <Link href="/core-courses/q1">
                 <button className="py-8 px-4 bg-gradient-to-r from-[#00616C] to-[#16bacc] text-white rounded-l-2xl font-semibold ">
