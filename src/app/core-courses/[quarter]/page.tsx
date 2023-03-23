@@ -15,6 +15,14 @@ function getData(id: string) {
   return res;
 }
 
+export function generateStaticParams() {
+  const data = CompulsaryQuarterData;
+
+  return data.map((ele) => ({
+    quarter: ele.id,
+  }));
+}
+
 function Page({ params }: { params: { quarter: string } }) {
   const data = getData(params.quarter);
 
