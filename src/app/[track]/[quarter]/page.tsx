@@ -20,6 +20,53 @@ function getData(id: string, quarter: string) {
   return finalRes;
 }
 
+export function generateStaticParams() {
+  const data = TracksData;
+
+  //   return [
+  //     { track: "ai", quarter: "q4" },
+  //     { track: "ai", quarter: "q5" },
+  //     { track: "wmd", quarter: "q4" },
+  //     { track: "wmd", quarter: "q5" },
+  //     { track: "cnc", quarter: "q4" },
+  //     { track: "cnc", quarter: "q5" },
+  //     { track: "iot", quarter: "q4" },
+  //     { track: "iot", quarter: "q5" },
+  //     { track: "gbs", quarter: "q4" },
+  //     { track: "gbs", quarter: "q5" },
+  //     { track: "npa", quarter: "q4" },
+  //     { track: "npa", quarter: "q5" },
+  //   ];
+  // }
+
+  // return {
+  //   track: ele.id,
+  //   quarter: ele.quarters.map((e) => e.id),
+  // }
+
+  // return [
+  //   ...data.map((ele) => {
+  //     const result = ele.quarters.map((e) => {
+  //       return { track: ele.id, quarter: e.id };
+  //     });
+  //     return result;
+  //   }),
+  // ];
+
+  const res = data.map((ele) => {
+    const result = ele.quarters.map((e) => {
+      return {
+        track: ele.id,
+        quarter: e.id,
+      };
+    });
+
+    return result;
+  });
+
+  return res.flat();
+}
+
 function page({ params }: { params: { track: string; quarter: string } }) {
   const data = getData(params.track, params.quarter);
 
